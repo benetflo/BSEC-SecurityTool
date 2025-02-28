@@ -3,7 +3,9 @@
 This Python script is a simple port scanner that allows you to check the open or closed status of ports on a target IP address. It supports three types of scans:
 
 Full scan: Scans all ports from 1 to 65535.
+
 Single port scan: Scans a specific port.
+
 Custom range scan: Scans a user-defined range of ports.
 
 Usage:
