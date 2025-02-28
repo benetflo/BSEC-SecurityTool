@@ -24,5 +24,5 @@ This Python script allows you to inspect HTTP headers from any URL. It retrieves
 ## Installation:
 * Ensure Python 3.x is installed.
 * Install dependencies with:
-* pip install requests
+  pip install requests
 # ____________________________________________
