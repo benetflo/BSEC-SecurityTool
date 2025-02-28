@@ -1,4 +1,5 @@
 # PentestingTools
+# __________________________________________________________________________________________
 ## 1. B_port_scan.py
 This Python script is a simple port scanner that allows you to check the open or closed status of ports on a target IP address. It supports three types of scans:
 
@@ -11,4 +12,17 @@ This Python script is a simple port scanner that allows you to check the open or
 ### Range scan: B-Port-Scan$ {TARGET_IP} {FLOOR_PORT} {CEILING_PORT}
 ### Type /help to view available commands and instructions.
 
-# ______________________________________________________________________
+# __________________________________________________________________________________________
+## 2. B_HTTP_header_inspector
+B-HTTP-Header-Inspector is a Python tool that allows you to inspect HTTP headers from any URL. It retrieves and displays key header information like Date, Server, Content-Type, and more, while handling errors like invalid URLs and timeouts.
+
+## Usage:
+Run the script.
+Enter a URL starting with http:// or https://.
+View the HTTP headers.
+Type exit to quit.
+## Installation:
+Ensure Python 3.x is installed.
+Install dependencies with:
+pip install requests
+# __________________________________________________________________________________________
