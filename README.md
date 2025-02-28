@@ -11,8 +11,8 @@ This Python script is a simple port scanner that allows you to check the open or
 ### Custom range scan: 
 ##### Scans a user-defined range of ports.
 
-### Usage:
-#### Full scan: 
+## Usage:
+### Full scan: 
 ##### B-Port-Scan$ TARGET_IP
 
 ### Single port scan: 
