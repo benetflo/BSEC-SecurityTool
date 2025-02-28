@@ -5,9 +5,9 @@ def help_commands():
     print("========HELP========")
     print("PLEASE NOTE SPACES BETWEEN PROMPTS")
     print("Commands:")
-    print("Full scan (ports 1 - 65536) == B-Port-Scan$ TARGET_IP")
-    print("Targeted port scan (single port) == B-Port-Scan$ TARGET_IP PORT")
-    print("Custom range scan == B-Port-Scan$ TARGET_IP FLOOR_PORT CEILING_PORT")
+    print("Full scan (ports 1 - 65536) ==  {TARGET_IP}")
+    print("Targeted port scan (single port) ==  {TARGET_IP} {PORT}")
+    print("Custom range scan == {TARGET_IP} {FLOOR_PORT} {CEILING_PORT}")
     print("====================")
 
 
@@ -47,12 +47,16 @@ def port_scanner(target_IP, s_port, port_floor, port_ceiling):
     # Full port scan if no range or single port is given (ports 1 to 65536)
     else:
         try:
+            no_open_ports = False
+            print("Scanning...")
             for i in range(1, 65536):  # Scan ports from 1 to 65536
                 result = s.connect_ex((target_IP, i))
                 if result == 0:
                     print(f"Port {i} is open on {target_IP}")
-                else:
-                    print(f"Port {i} is closed on {target_IP}")
+                    no_open_ports = True
+            if not no_open_ports:
+                print(f"No open ports on {target_IP}")
+                
         except socket.gaierror as e:  # Handle errors like invalid IP
             print(f"Invalid IP {e}")
 
@@ -113,9 +117,10 @@ target_IP, single_port, port_floor, port_ceiling = "", "", "", ""
 # Infinite loop to continuously ask for input and perform port scan
 while 1:
     # Get user input
+    print("type '/help' for commands")
     cmd_str, cmd_str_len = input_values()
     
-    # Based on the number of inputs, assign appropriate values
+    # Based on the number of inputs, assign appSropriate values
     match cmd_str_len:
         case 1:
             target_IP = assign_values(cmd_str, cmd_str_len)
