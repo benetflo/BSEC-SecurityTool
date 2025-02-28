@@ -18,11 +18,11 @@ This Python script allows you to inspect HTTP headers from any URL. It retrieves
 
 ## Usage:
 * Run the script.
-Enter a URL starting with http:// or https://.
-View the HTTP headers.
-Type exit to quit.
+* Enter a URL starting with http:// or https://.
+* View the HTTP headers.
+* Type exit to quit.
 ## Installation:
-Ensure Python 3.x is installed.
-Install dependencies with:
-pip install requests
+* Ensure Python 3.x is installed.
+* Install dependencies with:
+* pip install requests
 # __________________________________________________________________________________________
