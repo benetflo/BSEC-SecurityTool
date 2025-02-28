@@ -14,10 +14,10 @@ This Python script is a simple port scanner that allows you to check the open or
 
 # __________________________________________________________________________________________
 ## 2. B_HTTP_header_inspector
-B-HTTP-Header-Inspector is a Python tool that allows you to inspect HTTP headers from any URL. It retrieves and displays key header information like Date, Server, Content-Type, and more, while handling errors like invalid URLs and timeouts.
+This Python script allows you to inspect HTTP headers from any URL. It retrieves and displays key header information like Date, Server, Content-Type, and more.
 
 ## Usage:
-Run the script.
+* Run the script.
 Enter a URL starting with http:// or https://.
 View the HTTP headers.
 Type exit to quit.
