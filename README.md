@@ -13,12 +13,12 @@ This Python script is a simple port scanner that allows you to check the open or
 
 ## Usage:
 ### Full scan: 
-##### B-Port-Scan$ TARGET_IP
+##### B-Port-Scan$ {TARGET_IP}
 
 ### Single port scan: 
-##### B-Port-Scan$ TARGET_IP PORT
+##### B-Port-Scan$ {TARGET_IP} {PORT}
 
 ### Range scan: 
-##### B-Port-Scan$ TARGET_IP FLOOR_PORT CEILING_PORT
+##### B-Port-Scan$ {TARGET_IP} {FLOOR_PORT} {CEILING_PORT}
 
 ### Type /help to view available commands and instructions.
