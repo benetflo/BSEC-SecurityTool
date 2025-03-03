@@ -9,8 +9,8 @@ Everything here is designed for educational purposes only and should be used eth
 # Disclaimer & Legal Notice
 This project is strictly for learning, research, and ethical hacking purposes.
 
-🚫 Do not use these scripts on any system you do not own or have explicit permission to test.
-⚠ I am not responsible for any misuse of this code.
+* 🚫 Do not use these scripts on any system you do not own or have explicit permission to test.
+* ⚠ I am not responsible for any misuse of this code.
 
 Cybersecurity is a powerful skill—use it responsibly.
 
@@ -23,16 +23,16 @@ I created this repository because:
 * I am always open to feedback, so if you have suggestions or improvements, feel free to share!
 
 # ✅ Allowed Use Cases
-✔ Learning about network security & ethical hacking.
-✔ Practicing in a controlled environment (e.g., CTFs, lab setups).
-✔ Testing your own systems for vulnerabilities (with permission).
-✔ Understanding how attacks work to build stronger defenses.
+* ✔ Learning about network security & ethical hacking.
+* ✔ Practicing in a controlled environment (e.g., CTFs, lab setups).
+* ✔ Testing your own systems for vulnerabilities (with permission).
+* ✔ Understanding how attacks work to build stronger defenses.
 
 # 🚫 Strictly Forbidden Uses
-❌ Running these scripts against unauthorized systems.
-❌ Using them for malicious hacking, illegal access, or data theft.
-❌ Disrupting or harming real-world services.
-❌ Violating any cybersecurity laws or ethical guidelines.
+* ❌ Running these scripts against unauthorized systems.
+* ❌ Using them for malicious hacking, illegal access, or data theft.
+* ❌ Disrupting or harming real-world services.
+* ❌ Violating any cybersecurity laws or ethical guidelines.
 
 
 # B_HTTP_header_inspector.py
