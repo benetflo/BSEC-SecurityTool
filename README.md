@@ -34,6 +34,8 @@ I created this repository because:
 * ❌ Disrupting or harming real-world services.
 * ❌ Violating any cybersecurity laws or ethical guidelines.
 
+# -------------------------
+# Scripts:
 
 # B_HTTP_header_inspector.py
 This Python script allows you to inspect HTTP headers from any URL. It retrieves and displays key header information like Date, Server, Content-Type, and more.
