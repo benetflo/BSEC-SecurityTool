@@ -1,48 +1,21 @@
-#Funktion: KontrolleraLösenordStyrka(password)
-#    Initialisera poäng = 0
-
-#    // Steg 2: Kontrollera lösenordets längd
-#    Om lösenordets längd är mindre än 8
-#        Subtrahera 1 från poäng (låg poäng om för kort)
-#    Annars
-#        Lägg till 1 till poäng (bra längd)
-
-#    // Steg 3: Kontrollera komplexiteten
-#    Om lösenordet innehåller:
-#        - Minst en liten bokstav
-#        - Minst en stor bokstav
-#        - Minst en siffra
-#        - Minst ett specialtecken
-#        Lägg till 2 till poäng (hög komplexitet)
-#    Annars
-#        Lägg till 1 till poäng (låg komplexitet)
-
-#    // Steg 4: Kontrollera om lösenordet är ett vanligt lösenord
-#   Om lösenordet finns i en lista med vanliga lösenord
-#        Subtrahera 2 från poäng (vanligt lösenord)
-
-#    // Steg 5: Bedöm lösenordets styrka
-#    Om poäng <= 1
-#        Returnera "Mycket svagt"
-#    Annars om poäng = 2
-#        Returnera "Svagt"
-#    Annars om poäng = 3
-#        Returnera "Måttligt"
-#    Annars om poäng = 4
-#        Returnera "Starkt"
-#    Annars
-#        Returnera "Mycket starkt"
-
 import re
 
+global password_known = False
+global password_too_short = False
+global password_not_complex = False
 
 points = 0
+FILE_NAME = "rock_you.txt"
 
 def check_password_length(password):
+
+	global password_too_short
+
 	p_length = len(password)
 
 	if p_length < 8: # if password is shorter than 8 chars
 		return -1
+		password_too_short == True
 	elif p_length > 8 and p_length < 16: # if password is longer than 8 but shorter than 16 chars
 		return 1
 	else: # if password is longer than 16 chars
@@ -50,6 +23,7 @@ def check_password_length(password):
 
 def check_password_complexity(password):
 
+	global password_not_complex
 	# assign standard value
 	has_digit = False
 	has_special_sign = False
@@ -80,12 +54,47 @@ def check_password_complexity(password):
 		return 1
 	else # if one or two 'has_' == True
 		return -1
+		password_not_complex = True
 
 
 
-def check_password_if_common(password):
-	pass
+def check_password_if_common(password, COMMON_PASSWORDS):
+	try:
+		with open(COMMON_PASSWORDS, "r", encoding="latin-1") as file: # change encoding if you are using file that is not using "latin-1"
+		for line in line:
+			if password == line.strip(): # password is in list of common passwords
+				return -1
+				password_known = True
+			else: # if password NOT in list of common passwords
+				return 1
+
+	except FileNotFoundError as e:
+		print("File not found: {e}")
+		return 0
 
 def password_strength(points):
-	
 
+	if password_known:
+		print("Password is in list of common passwords!")
+	if password_too_short:
+		print("Password is too short!")
+	if password_not_complex:
+		print("Password is not complex enough. Did you use atleast one of each: example(#9bA)")
+
+	if points > 3:
+		print("Your password is very good")
+	elif points == 3 or points == 2:
+		print("Your password is good")
+	elif points == 1 or points == 0:
+		print("Your password is weak")
+	else:
+		print("Your password is very weak")
+
+def main(points, FILE_NAME)
+
+	while 1:
+		input_password = input("B-PasswordStrength$ ")
+		check_password_length(input_password)
+		check_password_complexity(input_password)
+		check_password_if_common(input_password, FILE_NAME)
+		password_strength(points)
