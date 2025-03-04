@@ -1,3 +1,5 @@
+# PLEASE ADD FILE OF COMMON PASSWORDS YOU WANT TO USE example 'rockyou.txt'. Make sure file is in the same folder as program
+
 import re
 
 global password_known = False
@@ -5,7 +7,7 @@ global password_too_short = False
 global password_not_complex = False
 
 points = 0
-FILE_NAME = "rock_you.txt"
+FILE_NAME = "FILE OF COMMON PASSWORDS HERE"
 
 def check_password_length(password):
 
