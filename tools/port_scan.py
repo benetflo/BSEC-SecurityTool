@@ -111,31 +111,32 @@ def assign_values(inp_str ,len_of_string):
     else:
         print("Invalid format! type '/help' for list of commands")
 
-# Variables to store the values of the IP and ports
-target_IP, single_port, port_floor, port_ceiling = "", "", "", ""
+def run():
+	# Variables to store the values of the IP and ports
+	target_IP, single_port, port_floor, port_ceiling = "", "", "", ""
 
-# Infinite loop to continuously ask for input and perform port scan
-while 1:
-    # Get user input
-    print("type '/help' for commands")
-    cmd_str, cmd_str_len = input_values()
-    
-    # Based on the number of inputs, assign appSropriate values
-    match cmd_str_len:
-        case 1:
-            target_IP = assign_values(cmd_str, cmd_str_len)
-        case 2:
-            target_IP, single_port = assign_values(cmd_str, cmd_str_len)
-        case 3:
-            target_IP, port_floor, port_ceiling = assign_values(cmd_str, cmd_str_len)
-        case _:
-            pass 
-    
-    # Perform the port scan based on the assigned values
-    port_scanner(target_IP, single_port, port_floor, port_ceiling)
-    
-    # Reset the variables for the next round of input
-    target_IP = ""
-    single_port = ""
-    port_floor = "" 
-    port_ceiling = ""
+	# Infinite loop to continuously ask for input and perform port scan
+	while 1:
+		# Get user input
+		print("type '/help' for commands")
+		cmd_str, cmd_str_len = input_values()
+
+		# Based on the number of inputs, assign appSropriate values
+		match cmd_str_len:
+			case 1:
+				target_IP = assign_values(cmd_str, cmd_str_len)
+			case 2:
+				target_IP, single_port = assign_values(cmd_str, cmd_str_len)
+			case 3:
+				target_IP, port_floor, port_ceiling = assign_values(cmd_str, cmd_str_len)
+			case _:
+				pass
+
+		# Perform the port scan based on the assigned values
+		port_scanner(target_IP, single_port, port_floor, port_ceiling)
+
+		# Reset the variables for the next round of input
+		target_IP = ""
+		single_port = ""
+		port_floor = ""
+		port_ceiling = ""
