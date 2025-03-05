@@ -1,4 +1,4 @@
-# PentestingTools
+# BSEC-SecurityTool
 
 # About This Project
 This repository contains various security-related scripts that I have written as part of my learning journey in cybersecurity and ethical hacking.
