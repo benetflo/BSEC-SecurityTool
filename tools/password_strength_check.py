@@ -2,12 +2,12 @@
 
 import re
 
-global password_known = False
-global password_too_short = False
-global password_not_complex = False
+password_known = False
+password_too_short = False
+password_not_complex = False
 
 points = 0
-FILE_NAME = "FILE OF COMMON PASSWORDS HERE"
+FILE_NAME = "10k-most-common.txt"
 
 def check_password_length(password):
 
@@ -54,7 +54,7 @@ def check_password_complexity(password):
 		return 2
 	elif counter == 3: # if all but one 'has_' == True
 		return 1
-	else # if one or two 'has_' == True
+	else: # if one or two 'has_' == True
 		return -1
 		password_not_complex = True
 
@@ -62,13 +62,13 @@ def check_password_complexity(password):
 
 def check_password_if_common(password, COMMON_PASSWORDS):
 	try:
-		with open(COMMON_PASSWORDS, "r", encoding="latin-1") as file: # change encoding if you are using file that is not using "latin-1"
-		for line in line:
-			if password == line.strip(): # password is in list of common passwords
-				return -1
-				password_known = True
-			else: # if password NOT in list of common passwords
-				return 1
+		with open(COMMON_PASSWORDS, "r", encoding="UTF-8") as file: # change encoding if you are using file that is not using "latin-1"
+			for line in line:
+				if password == line.strip(): # password is in list of common passwords
+					return -1
+					password_known = True
+				else: # if password NOT in list of common passwords
+					return 1
 
 	except FileNotFoundError as e:
 		print("File not found: {e}")
@@ -92,7 +92,7 @@ def password_strength(points):
 	else:
 		print("Your password is very weak")
 
-def main(points, FILE_NAME)
+def main(points, FILE_NAME):
 
 	while 1:
 		input_password = input("B-PasswordStrength$ ")
@@ -100,3 +100,6 @@ def main(points, FILE_NAME)
 		check_password_complexity(input_password)
 		check_password_if_common(input_password, FILE_NAME)
 		password_strength(points)
+
+def run():
+	main(points, FILE_NAME)

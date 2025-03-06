@@ -31,18 +31,20 @@ def print_info(response):
         print(f"{key}: {value}")
 
 
-while 1:
-    try:
-        url = input("B-HTTP-Header-Inspector$ ")
-        if url.lower() == "exit":
-            exit(0)
-        else:
-            headers = get_http_headers(url)
-            headers = {key.lower(): value for key, value in headers.items()}
-            if headers:
-                print_info(headers)
-            else:
-                print("No headers to display.")
-    except Exception as e:
-        print(f"ERROR: {e}")
+def run():
+
+	while 1:
+		try:
+			url = input("BSEC-HTTP-Header-Inspector$ ")
+			if url.lower() == "exit":
+				exit(0)
+			else:
+				headers = get_http_headers(url)
+				headers = {key.lower(): value for key, value in headers.items()}
+				if headers:
+					print_info(headers)
+				else:
+					print("No headers to display.")
+		except Exception as e:
+			print(f"ERROR: {e}")
 

@@ -68,7 +68,7 @@ def port_scanner(target_IP, s_port, port_floor, port_ceiling):
 def input_values():
     while 1:
         # Take input from the user
-        user_input = input("B-Port-Scan$ ")
+        user_input = input("BSEC-Port-Scan$ ")
         
         # If the user inputs '/help', display the help commands
         if user_input == "/help":
