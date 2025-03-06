@@ -1,4 +1,16 @@
-B_HTTP_header_inspector.py
+password_strength_check.py
+
+This program helps you create a more secure password by ensuring it contains at least one of each of the following: 
+* CAPITAL LETTER (A-Z)
+* lowercase letter (a-z)
+* special signs (!#¤%?+=)
+* numbers (0-9)
+
+Please note that even if the program does not warn you about your password being in the list of common passwords, it may still be widely used in certain countries, especially if it contains local words. The list used in this program includes 10,000 common passwords, but there are, of course, many more insecure passwords beyond this. Always avoid dictionary words and use a strong combination of numbers, special characters, uppercase, and lowercase letters. Stay safe! /B
+
+
+
+HTTP_header_inspector.py
 This Python script allows you to inspect HTTP headers from any URL. It retrieves and displays key header information like Date, Server, Content-Type, and more.
 
 Usage:
@@ -11,7 +23,9 @@ Ensure Python 3.x is installed.
 Install dependencies with: pip install requests
 
 
-B_port_scan.py
+
+
+port_scan.py
 This Python script is a simple port scanner that allows you to check the open or closed status of ports on a target IP address. It supports three types of scans:
 
 Full scan: Scans all ports from 1 to 65535.
