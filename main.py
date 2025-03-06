@@ -1,5 +1,6 @@
 import tools.port_scan
 import tools.HTTP_header_inspector
+import tools.password_strength_check
 
 import os
 
@@ -29,7 +30,7 @@ def show_disclaimer():
 	-----------------------------------------------------------------
 	To proceed, you must confirm your intent to use this program responsibly. Type the following statement exactly as shown:
 
-	I solemnly swear that I am up to ONLY good"
+	I solemnly swear that I am up to ONLY good
 	"""
 	print(disclaimer_text)
 	phrase = "I solemnly swear that I am up to ONLY good"
@@ -52,20 +53,21 @@ def show_disclaimer():
 if __name__ == "__main__":
 	if show_disclaimer():
 		while 1:
+			clear_screen()
 			print(" ________________________________ ")
 			print("|         WELCOME TO BSEC        |")
 			print("|     Enter number to use tool   |")
 			print("|________________________________|")
 			print("|          1. Port scan          |")
-			print("|    2.                          |")
-			print("|     3. HTTP header inspector   |")
+			print("|   2. Password strength check   |")
+			print("|    3. HTTP header inspector    |")
 			print("|--------------------------------|")
 			menu_answer = input("\n-> ")
 			match menu_answer:
 				case '1':
 					tools.port_scan.run()
 				case '2':
-					pass
+					tools.password_strength_check.run()
 				case '3':
 					tools.HTTP_header_inspector.run()
 				case _:

@@ -73,6 +73,8 @@ def input_values():
         # If the user inputs '/help', display the help commands
         if user_input == "/help":
             help_commands()
+        elif user_input == "exit":
+            return None, None
         else:
             # Split the input string into a list of words
             split_input = user_input.split()
@@ -118,8 +120,12 @@ def run():
 	# Infinite loop to continuously ask for input and perform port scan
 	while 1:
 		# Get user input
-		print("type '/help' for commands")
+
+		print("\ntype '/help' for commands")
 		cmd_str, cmd_str_len = input_values()
+
+		if cmd_str == None and cmd_str_len == None:
+			break
 
 		# Based on the number of inputs, assign appSropriate values
 		match cmd_str_len:
