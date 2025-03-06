@@ -1,0 +1,2 @@
+#TODO: fixa så att man inte behöver vänta ifall man skriver in tex hejsan i port_scan.py, throw error direkt
+#TODO: /help i alla tre existerande filer bör läsa från textfilen med info
