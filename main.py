@@ -1,6 +1,5 @@
 import tools.port_scan
-
-
+import tools.HTTP_header_inspector
 
 import os
 
@@ -52,6 +51,22 @@ def show_disclaimer():
 
 if __name__ == "__main__":
 	if show_disclaimer():
-		print("====|WELCOME THANK YOU FOR USING BSEC|====")
-
-		tools.port_scan.run()
+		while 1:
+			print(" ________________________________ ")
+			print("|         WELCOME TO BSEC        |")
+			print("|     Enter number to use tool   |")
+			print("|________________________________|")
+			print("|          1. Port scan          |")
+			print("|    2.                          |")
+			print("|     3. HTTP header inspector   |")
+			print("|--------------------------------|")
+			menu_answer = input("\n-> ")
+			match menu_answer:
+				case '1':
+					tools.port_scan.run()
+				case '2':
+					pass
+				case '3':
+					tools.HTTP_header_inspector.run()
+				case _:
+					print("Invalid input!")
